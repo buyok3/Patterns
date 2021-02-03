@@ -1,5 +1,7 @@
 package com.company.Interfaces;
 
+import com.company.Transportation;
+
 public interface Strategy {
-    float doAction(int a, int b);
+    String doAction(Transportation trans);
 }

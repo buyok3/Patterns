@@ -1,24 +1,25 @@
 package com.company;
 
-import com.company.Objects.OperationAdd;
-import com.company.Objects.OperationDivision;
-import com.company.Objects.OperationMultiply;
-import com.company.Objects.OperationSubtraction;
+import com.company.Interfaces.Strategy;
+import com.company.Objects.BusShuttleTransfer;
+import com.company.Objects.BusTransfer;
+import com.company.Objects.CarTransfer;
+import com.company.Objects.TaxiTransfer;
 
 public class Main {
 
     public static void main(String[] args) {
-        Context con = new Context(new OperationAdd());
+        Context con = new Context(new BusShuttleTransfer());
 
-        System.out.println(con.executeOperation(5, 10));
+        System.out.println(con.executeOperation(Transportation.BusShuttle));
 
-        con = new Context(new OperationMultiply());
-        System.out.println(con.executeOperation(5, 10));
+        con = new Context(new BusTransfer());
+        System.out.println(con.executeOperation(Transportation.Bus));
 
-        con = new Context(new OperationSubtraction());
-        System.out.println(con.executeOperation(5, 10));
+        con = new Context(new CarTransfer());
+        System.out.println(con.executeOperation(Transportation.Car));
 
-        con = new Context(new OperationDivision());
-        System.out.println(con.executeOperation(5, 10));
+        con = new Context(new TaxiTransfer());
+        System.out.println(con.executeOperation(Transportation.Taxi));
     }
 }

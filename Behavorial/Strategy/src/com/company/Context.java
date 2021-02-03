@@ -9,7 +9,7 @@ public class Context {
         this.strategy = strategy;
     }
 
-    public float executeOperation(int num1, int num2){
-        return strategy.doAction(num1, num2);
+    public String executeOperation(Transportation trans){
+        return strategy.doAction(trans);
     }
 }
