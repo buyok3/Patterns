@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.Interfaces.Strategy;
 import com.company.Objects.BusShuttleTransfer;
 import com.company.Objects.BusTransfer;
 import com.company.Objects.CarTransfer;
